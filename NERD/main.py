@@ -18,6 +18,7 @@ from ayx_plugin_sdk.core import (
     ProviderBase,
     register_plugin,
 )
+import flair
 
 
 class NERD(Plugin):

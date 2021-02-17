@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html style="padding:20px">
-
 <head>
-	<meta charset="utf-8">
-	<title>Alteryx Python SDK PassThrough</title>
-	<script>
-		document.write(`<link rel="import" href="${window.Alteryx.LibDir}2/lib/includes.html">`);
-	</script>
+  <meta charset="utf-8">
+  <title>NERD</title>
+  <script type="text/javascript">
+    document.write('<link rel="import" href="' + window.Alteryx.LibDir + '2/lib/includes.html">');
+  </script>
 </head>
-
 <body>
-	<h2>Alteryx Python SDK PassThrough</h2>
-    <div>Takes the input data and passes it exactly to the output data.</div>
-    <div>There are currently no configuration options for this tool.</div>
+  <form>
+    <fieldset>
+      <legend class='blueTitle'>XMSG("NERD")</legend>
+      <div class=''>
+        <label>XMSG("Incoming Text Field:")</label>
+		<ayx data-ui-props="{type: 'DropDown'}" data-item-props="{dataName: 'TextField', dataType: 'FieldSelector', fieldType: 'String'}"></ayx>
+      </div>
+    </fieldset>
+  </form>
 </body>
-
 </html>

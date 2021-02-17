@@ -1,23 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
 <AlteryxJavaScriptPlugin>
-	<EngineSettings EngineDll="Python" EngineDllEntryPoint="main.py" SDKVersion="10.1" ToolFamily="AyxPluginSdkExamples"></EngineSettings>
+	<EngineSettings EngineDll="Python" EngineDllEntryPoint="main.py" SDKVersion="10.1" ToolFamily="NERD" />
 	<GuiSettings Html="index.html" Icon="icon.png" SDKVersion="10.1">
 		<InputConnections>
-			<Connection AllowMultiple="False" Label="" Name="Input" Optional="False" Type="Connection"></Connection>
+			<Connection AllowMultiple="False" Label="" Name="Input" Optional="False" Type="Connection" />
 		</InputConnections>
 		<OutputConnections>
-			<Connection AllowMultiple="False" Label="" Name="Output" Optional="False" Type="Connection"></Connection>
+			<Connection AllowMultiple="False" Label="" Name="Output" Optional="False" Type="Connection" />
 		</OutputConnections>
 	</GuiSettings>
 	<Properties>
 		<MetaInfo>
 			<Name>NERD</Name>
-			<Description>Example pass through tool</Description>
+			<Description>Extract named entities and parts of speech from incoming text</Description>
 			<ToolVersion>1.0</ToolVersion>
-			<CategoryName>SDK Examples</CategoryName>
-			<SearchTags>python, sdk, python sdk</SearchTags>
-			<Author>Alteryx, Inc.</Author>
-			<Company>Alteryx, Inc.</Company>
+			<CategoryName>ayx_builders</CategoryName>
+			<SearchTags>python, sdk, NER, POS, NLP</SearchTags>
+			<Author>ayx_builders</Author>
 			<Copyright>2020</Copyright>
 		</MetaInfo>
 	</Properties>
