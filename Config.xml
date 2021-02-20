@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <AlteryxJavaScriptPlugin>
-	<EngineSettings EngineDll="Python" SDKVersion="10.1"></EngineSettings>
+	<EngineSettings EngineDll="Python" SDKVersion="10.1" ToolFamily="NERD" />
 	<Properties>
 		<MetaInfo>
 			<Name>Alteryx Python SDK Example Tools</Name>

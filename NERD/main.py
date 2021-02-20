@@ -17,21 +17,18 @@ from ayx_plugin_sdk.core import (
     Plugin,
     ProviderBase,
     register_plugin,
+    FieldType
 )
 import flair
 
 
 class NERD(Plugin):
-    """A sample Plugin that passes data from an input connection to an output connection."""
-
     def __init__(self, provider: ProviderBase):
         """Construct the AyxRecordProcessor."""
         self.config = provider.tool_config
-        self.name = "Pass through"
+        self.name = "NERD"
         self.provider = provider
         self.output_anchor = self.provider.get_output_anchor("Output")
-
-        self.provider.io.info(f"{self.name} tool started")
 
     def on_input_connection_opened(self, input_connection: InputConnectionBase) -> None:
         """Initialize the Input Connections of this plugin."""
@@ -39,16 +36,29 @@ class NERD(Plugin):
             raise RuntimeError("Metadata must be set before setting containers.")
 
         output_metadata = input_connection.metadata.clone()
+        output_metadata.fields = [i for i in output_metadata.fields if i.name != self.config['TextField']]
+        output_metadata.add_field("Named Entity", FieldType.v_wstring, size=1073741823)
+        output_metadata.add_field("Start Position", FieldType.int64)
+        output_metadata.add_field("End Position", FieldType.int64)
+        output_metadata.add_field("Named Entity Type", FieldType.v_string, size=2147483647)
+        self.provider.io.info(f"{output_metadata.fields}")
         self.output_anchor.open(output_metadata)
 
     def on_record_packet(self, input_connection: InputConnectionBase) -> None:
         """Handle the record packet received through the input connection."""
         packet = input_connection.read()
-        self.output_anchor.write(packet)
+        df_packet = packet.to_dataframe()
+
+        # For each record, extract the Texts value
+        # Run NER algorithm and identify named entities
+        # Delete the Texts field from dataframe
+        # Add our new fields
+        # populate new fields from NER results
+
+        self.output_anchor.write(packet.from_dataframe(df_packet))
 
     def on_complete(self) -> None:
-        """Handle for when the plugin is complete."""
-        self.provider.io.info(f"{self.name} tool done")
+        return
 
 
 AyxPlugin = register_plugin(NERD)
