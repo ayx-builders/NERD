@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.4">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="3" />
+          <Fields>
+            <Field name="ID" />
+            <Field name="Something Else" />
+            <Field name="Texts" />
+          </Fields>
+          <Data>
+            <r>
+              <c>1</c>
+              <c>ABCDEFG</c>
+              <c>Efforts to vaccinate the world’s population against Covid-19 got a boost Friday after research showed that some vaccines provide strong, one-dose protection, and that one of the vaccines can now be stored in normal freezers instead of ultra-cold ones.
+
+The vaccine developed by Pfizer Inc. and BioNTech SE generates robust immunity after one dose, according to new research out of Israel, and further data showed that the University of Oxford and AstraZeneca PLC vaccine similarly prevented Covid-19 when doses were spaced three months apart.
+
+The findings could boost arguments in favor of delaying the second dose of the two-shot vaccine, as the U.K. has done. They could also have substantial implications on vaccine policy and distribution around the world, simplifying the logistics of distribution.
+
+Pfizer and BioNTech said they have asked U.S. regulators to allow their vaccine to be stored and transported at temperatures consistent with standard freezing, around minus 20 Celsius, following successful internal stability testing. Similar filings were being prepared in other countries.
+
+Should Pfizer’s request be granted by regulators, it would mean its vaccine would vastly expand access in rural regions around the world, as well as pharmacies and physician offices, according to industry experts and officials.
+
+The label change would allow the shots to be kept essentially wherever providers have normal freezers, which would make it much easier to handle and potentially accessible to poorer countries with no access to ultracold distribution and storage equipment. Pfizer’s vaccine would also be able to return to ultracold temperatures after standard temperatures.
+
+“This is excellent news and it will greatly improve the vaccine rollout,” said Ivan Dikic, director of the Institute of Biochemistry II at Goethe University Frankfurt. “The improved protocol will be much easier to handle for both rich and developing countries around the world.”
+
+Pfizer plans to request a label change from the European Medicines Agency, too. If EMA grants the request, the EU rollout could accelerate. EMA didn’t respond to a request to comment Friday. Germany’s Robert Koch Institute, the disease control agency that includes a vaccination advisory panel, said in a statement that it would revisit its guidelines as new data emerge.
+
+The requirement for ultra-cold storage of the shots has been a major obstacle for some providers and local health departments, prompting them in recent months to purchase special equipment. The restrictions have also contributed to the glacial pace of Europe’s vaccine rollout, making it complicated for the vaccine to be administered in general surgeries and nursing homes.
+
+Doses were wasted early on in the rollout as local authorities failed to adhere to the strict handling rules. In the German state of Bavaria, 2,000 doses were discarded due to exposure to higher temperatures.
+
+In the U.S., retail chains such as CVS Health Corp. and grocers, major health systems and other providers have some ultracold freezers, but many communities don’t have them.
+
+Experts say the change could help with storage as supply increases and as more vaccination sites become available for the general public to visit. Neighborhood pharmacies and physician offices that might otherwise have been left out could administer the vaccine more easily.
+
+“It does definitely increase the number of sites,” said Moncef Slaoui, the former chief adviser to Operation Warp Speed, the Trump administration’s Covid-19 response program, in an interview Friday. “Most immunization sites would have a minus 20 freezer like everybody has at home.”
+
+Challenges remain, vaccine experts say, because Pfizer’s vaccine will continue to be shipped in its specialized boxes that can carry as many as 975 vials, making handling difficult for small sites such as doctor’s offices and pharmacies that may not need many doses.
+
+Rival vaccines are still easier to store. Moderna Inc.’s vaccine can be stored at standard freezer temperatures for up to six months and remain refrigerated for up to 30 days. Johnson &amp; Johnson’s vaccine, which U.S. regulators are weighing authorizing and which has been shown to safely protect against Covid-19, can be kept in normal freezers for up to two years, with at least three months in the fridge.
+
+The findings regarding single-dose effectiveness are likely to renew debate over whether dosing schedules should be adjusted amid limited vaccine supply.
+
+In research published Friday in the Lancet medical journal, one dose of Pfizer’s vaccine was shown to be 85% effective in preventing symptomatic disease 15 to 28 days after being given, according to a peer-reviewed observational study of about 9,000 people conducted by the Israeli government-owned Sheba Medical Center.
+
+Pfizer and BioNTech have said the second dose should be given three weeks later, the schedule that was used in its late-stage study that found the vaccine to be 95% protective. They also have said they haven’t studied alternative dose schedules, but that changes should be up to health authorities.
+
+The U.K. delayed a second dose by up to 12 weeks so it could use limited supplies to deliver a single dose to more people. Almost one-third of the U.K.’s adult population has now received at least one shot. Parts of Canada and Europe have implemented similar measures, though many countries including the U.S. haven’t done so.
+
+The Israeli findings came from real-world data about the effect of the vaccine gathered outside of clinical trials in one of the leading nations in immunization against the coronavirus pandemic. Israel has given the first shot to nearly half of its 9.3 million citizens.
+
+The authors noted, however, that the findings don’t justify changing dose schedules, and that more follow-up to assess long-term effectiveness of a single dose is needed before deciding to delay second doses.
+
+“This is the first study assessing effectiveness of a single vaccine dose in real-life conditions and shows early effectiveness, even before the second dose was administered,” said Eyal Leshem, director of Sheba’s Center for Travel Medicine and Tropical Diseases and one of the authors of the study.
+
+The results might differ from others because the subjects were largely younger and healthier, said Gili Regev-Yochay, another of the authors. She also said the study couldn’t confirm how long protection from one shot would last, as most of the subjects received a second shot.
+
+Also Friday, in the Lancet, the vaccine co-developed by the University of Oxford and AstraZeneca was shown to be 81% effective at preventing symptomatic Covid-19 when doses were spaced 12 weeks apart, compared with 55% spaced six weeks or less, according to results of a peer-reviewed study. Researchers also reported two doses of the vaccine were shown to potentially reduce cases by 50%—a number that scientists said is lower because it included people with and without symptoms. The vaccine’s effect on curbing asymptomatic cases is lower, they said.
+
+Friday’s study updated data published this month that hadn’t yet been reviewed by independent researchers.
+
+Pfizer’s late-stage, 44,000-person study found a two-dose regimen to be 95% effective at protecting against symptomatic Covid-19. The study found the vaccine to be more than 52% effective after one shot but didn’t specify further before the second dose is given.
+
+During the period when the data for the Israeli study were gathered, a coronavirus variant that was first detected in the U.K. and is considered more contagious than the original pathogen made up more than 81% of confirmed infections. The data amount to strong evidence that the vaccine is highly effective against a mutation that has forced European governments to prolong lockdowns.
+
+Ugur Sahin, the co-founder of BioNTech, told The Wall Street Journal in December that next-generation Covid-19 shots would probably consist of one dose.
+
+“This groundbreaking research supports the British government’s decision to begin inoculating its citizens with a single dose of the vaccine,” said Arnon Afek, Sheba’s deputy director general.</c>
+            </r>
+            <r>
+              <c>2</c>
+              <c>XYZ</c>
+              <c />
+            </r>
+            <r>
+              <c>3</c>
+              <c />
+              <c />
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="342" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\tlarsen\AppData\Local\Temp\Engine_6268_b925d940b87a47d2b89112cebddfc4d5_\Engine_9444_48490824e215466498466ec506a0e6bc_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="NERD">
+        <Position x="246" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TextField>Texts</TextField>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="Python" EngineDllEntryPoint="NERD\main.py" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="246" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\tlarsen\AppData\Local\Temp\Engine_6268_b925d940b87a47d2b89112cebddfc4d5_\Engine_9444_c1bb477e546d4878b1fda8b8e53bd5fb_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="150" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF   [ID] = 3&#xA;THEN ''&#xA;ELSE [Texts]&#xA;ENDIF" field="Texts" size="8159" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Texts = IF   [ID] = 3
+THEN ''
+ELSE [Texts]
+ENDIF
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>test</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

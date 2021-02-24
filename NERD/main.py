@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 """Example pass through tool."""
+import numpy
 from ayx_plugin_sdk.core import (
     InputConnectionBase,
     Plugin,
@@ -19,7 +20,8 @@ from ayx_plugin_sdk.core import (
     register_plugin,
     FieldType
 )
-import flair
+from flair.models import SequenceTagger
+from flair.tokenization import SegtokSentenceSplitter
 
 
 class NERD(Plugin):
@@ -28,7 +30,10 @@ class NERD(Plugin):
         self.config = provider.tool_config
         self.name = "NERD"
         self.provider = provider
+        self.output_metadata = None
         self.output_anchor = self.provider.get_output_anchor("Output")
+        self.splitter = SegtokSentenceSplitter()
+        self.tagger = SequenceTagger.load('ner-fast')
 
     def on_input_connection_opened(self, input_connection: InputConnectionBase) -> None:
         """Initialize the Input Connections of this plugin."""
@@ -38,10 +43,10 @@ class NERD(Plugin):
         output_metadata = input_connection.metadata.clone()
         output_metadata.fields = [i for i in output_metadata.fields if i.name != self.config['TextField']]
         output_metadata.add_field("Named Entity", FieldType.v_wstring, size=1073741823)
-        output_metadata.add_field("Start Position", FieldType.int64)
-        output_metadata.add_field("End Position", FieldType.int64)
+        output_metadata.add_field("Sentence", FieldType.int64)
+        output_metadata.add_field("Sentence Position", FieldType.int64)
         output_metadata.add_field("Named Entity Type", FieldType.v_string, size=2147483647)
-        self.provider.io.info(f"{output_metadata.fields}")
+        self.output_metadata = output_metadata
         self.output_anchor.open(output_metadata)
 
     def on_record_packet(self, input_connection: InputConnectionBase) -> None:
@@ -49,16 +54,72 @@ class NERD(Plugin):
         packet = input_connection.read()
         df_packet = packet.to_dataframe()
 
-        # For each record, extract the Texts value
-        # Run NER algorithm and identify named entities
-        # Delete the Texts field from dataframe
-        # Add our new fields
-        # populate new fields from NER results
+        df_packet['__NER__'] = df_packet[self.config['TextField']].apply(self.generate_ner)
+        del df_packet[self.config['TextField']]
+        df_packet = df_packet.explode('__NER__')
+        df_packet['Named Entity'] = df_packet['__NER__'].apply(get_text)
+        df_packet['Sentence'] = df_packet['__NER__'].apply(get_sentence)
+        df_packet['Sentence Position'] = df_packet['__NER__'].apply(get_position)
+        df_packet['Named Entity Type'] = df_packet['__NER__'].apply(get_type)
+        del df_packet['__NER__']
 
-        self.output_anchor.write(packet.from_dataframe(df_packet))
+        # X instantiate splitter
+        # X instantiate tagging model (NER)
+        # X Create function for NER
+        # X run Apply using NER function
+        # X Remove text column
+        # X Explode dataframe
+        # X Extract columns
+
+        self.output_anchor.write(packet.from_dataframe(self.output_metadata, df_packet))
 
     def on_complete(self) -> None:
         return
+
+    def generate_ner(self, text: str):
+        if text is None:
+            return []
+        ner_data = []
+        sentences = self.splitter.split(text)
+        self.tagger.predict(sentences)
+        sentence_count = 1
+        for sentence in sentences:
+            for entity in sentence.get_spans('ner'):
+                ner_data.append(NerData(entity.text, sentence_count, entity.start_pos, entity.labels[0].value))
+            sentence_count += 1
+        return ner_data
+
+
+class NerData:
+    def __init__(self, text, sentence, position, ner_type):
+        self.text = text
+        self.sentence = sentence
+        self.position = position
+        self.type = ner_type
+
+
+def get_text(ner_data: NerData):
+    if ner_data is numpy.nan:
+        return None
+    return ner_data.text
+
+
+def get_sentence(ner_data: NerData):
+    if ner_data is numpy.nan:
+        return None
+    return ner_data.sentence
+
+
+def get_position(ner_data: NerData):
+    if ner_data is numpy.nan:
+        return None
+    return ner_data.position
+
+
+def get_type(ner_data: NerData):
+    if ner_data is numpy.nan:
+        return None
+    return ner_data.type
 
 
 AyxPlugin = register_plugin(NERD)
