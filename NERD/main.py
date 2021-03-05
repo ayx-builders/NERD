@@ -33,7 +33,8 @@ class NERD(Plugin):
         self.output_metadata = None
         self.output_anchor = self.provider.get_output_anchor("Output")
         self.splitter = SegtokSentenceSplitter()
-        self.tagger = SequenceTagger.load('ner-fast')
+        self.tagger_pos = SequenceTagger.load('pos')
+        self.tagger_ner = SequenceTagger.load('ner-fast')
 
     def on_input_connection_opened(self, input_connection: InputConnectionBase) -> None:
         """Initialize the Input Connections of this plugin."""
@@ -80,10 +81,18 @@ class NERD(Plugin):
         if text is None:
             return []
         ner_data = []
-        sentences = self.splitter.split(text)
-        self.tagger.predict(sentences)
+        sentences_pos = self.splitter.split(text)
+        self.tagger_pos.predict(sentences_pos)
+        sentences_ner = self.splitter.split(text)
+        self.tagger_ner.predict(sentences_ner)
+
         sentence_count = 1
-        for sentence in sentences:
+        for sentence in sentences_pos:
+            for entity in sentence.get_spans('pos'):
+                ner_data.append(NerData(entity.text, sentence_count, entity.start_pos, entity.labels[0].value))
+            sentence_count += 1
+        sentence_count = 1
+        for sentence in sentences_ner:
             for entity in sentence.get_spans('ner'):
                 ner_data.append(NerData(entity.text, sentence_count, entity.start_pos, entity.labels[0].value))
             sentence_count += 1

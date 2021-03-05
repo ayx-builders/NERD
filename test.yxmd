@@ -101,7 +101,7 @@ Ugur Sahin, the co-founder of BioNTech, told The Wall Street Journal in December
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\tlarsen\AppData\Local\Temp\Engine_6268_b925d940b87a47d2b89112cebddfc4d5_\Engine_9444_48490824e215466498466ec506a0e6bc_.yxdb</TempFile>
+          <TempFile>C:\Users\tlarsen\AppData\Local\Temp\Engine_5004_0971d23367644ae4a0a3f40ee6d15366_\Engine_3744_ab28cc6773b84cdfadb4f5a9d58a63ab_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -139,34 +139,6 @@ Ugur Sahin, the co-founder of BioNTech, told The Wall Street Journal in December
       </Properties>
       <EngineSettings EngineDll="Python" EngineDllEntryPoint="NERD\main.py" />
     </Node>
-    <Node ToolID="4">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="246" y="138" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <TempFile>C:\Users\tlarsen\AppData\Local\Temp\Engine_6268_b925d940b87a47d2b89112cebddfc4d5_\Engine_9444_c1bb477e546d4878b1fda8b8e53bd5fb_.yxdb</TempFile>
-          <TempFileDataProfiling />
-          <Layout>
-            <ViewMode>Single</ViewMode>
-            <ViewSize value="100" />
-            <View1>
-              <DefaultTab>Profile</DefaultTab>
-              <Hints>
-                <Table />
-              </Hints>
-            </View1>
-            <View2 />
-          </Layout>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
-    </Node>
     <Node ToolID="5">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
         <Position x="150" y="54" />
@@ -179,6 +151,7 @@ Ugur Sahin, the co-founder of BioNTech, told The Wall Street Journal in December
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
+          <AnnotationText>Empty string</AnnotationText>
           <DefaultAnnotationText><![CDATA[Texts = IF   [ID] = 3
 THEN ''
 ELSE [Texts]
@@ -198,10 +171,6 @@ ENDIF
     <Connection>
       <Origin ToolID="3" Connection="Output" />
       <Destination ToolID="2" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="5" Connection="Output" />
-      <Destination ToolID="4" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="5" Connection="Output" />
